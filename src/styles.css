@@ -39,7 +39,6 @@ header {
 
 .income-expense {
   border: 1px solid purple;
-  height: 50px;
   margin: 0 50px;
   display: flex;
   justify-content: center;
@@ -100,4 +99,12 @@ header {
 
 #transaction {
   margin-left: 20px;
+}
+
+.balance-amount {
+  font-size: 40px;
+}
+
+.balance-small {
+  font-size: 30px;
 }

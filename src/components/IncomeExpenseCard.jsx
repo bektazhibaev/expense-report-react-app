@@ -5,11 +5,11 @@ const IncomeExpenseCard = ({ transactions, income, expense }) => {
     <div className="income-expense">
       <div className="income">
         <h4>Income</h4>
-        <p>{income}</p>
+        <p className="balance-small">${income.toFixed(2)}</p>
       </div>
       <div className="expense">
         <h4>Expense</h4>
-        <p>{expense}</p>
+        <p className="balance-small">${expense.toFixed(2)}</p>
       </div>
     </div>
   );

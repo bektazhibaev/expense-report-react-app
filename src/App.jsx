@@ -7,10 +7,6 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import BasicModal from "./components/EditModal";
 
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
-
 export default function App() {
   const [transactions, setTransactions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
