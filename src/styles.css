@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.App {
+  text-align: center;
+  border: 1px solid black;
+  font-family: sans-serif;
+}
+
+header {
+  padding: 0px 100px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center;
+  justify-content: center; */
+  align-items: center;
+}
+
+.transaction {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.labels {
+  float: left;
+  align-items: left;
+  text-align: left;
+}
+
+.income-expense {
+  border: 1px solid purple;
+  height: 50px;
+  margin: 0 50px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.transaction-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+
+.positive {
+  margin: 5px 20px;
+  border: 3px solid green;
+}
+
+.negative {
+  margin: 5px 20px;
+  border: 3px red solid;
+}
+
+.transaction-name {
+  margin-left: 20px;
+}
+
+.transaction-amount {
+  margin-right: 20px;
+}
+
+.closeBtn {
+  float: right;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+.inputForm {
+  margin: 10px;
+  padding: 5px;
+}
