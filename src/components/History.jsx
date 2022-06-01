@@ -10,7 +10,7 @@ const History = ({ transactions, handleDelete, handleOpen, isOpen }) => {
           transaction.amount > 0 ? " positive" : " negative";
 
         return (
-          <div className={classNameForTransaction}>
+          <div className={classNameForTransaction} key={transaction.id}>
             <div className="transaction-info">
               <p className="transaction-name">{transaction.name}</p>
               <p className="transaction-amount">{transaction.amount}</p>

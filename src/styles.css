@@ -88,6 +88,16 @@ header {
 }
 
 .inputForm {
-  margin: 10px;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-div {
+  display: flex;
+  margin: 20px;
+}
+
+#transaction {
+  margin-left: 20px;
 }
