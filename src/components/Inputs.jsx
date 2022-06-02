@@ -38,7 +38,7 @@ const Inputs = ({
           />
         </div>
         <div className="submit-btn">
-          <input type="submit" value="Add transaction" onClick={handleSubmit} />
+          <input className="submitBtn" type="submit" value="Add transaction" onClick={handleSubmit} />
         </div>
       </form>
     </div>

@@ -1,6 +1,8 @@
+import { useState } from "react";
 import "../styles.css";
 
-const History = ({ transactions, handleDelete, handleOpen, isOpen }) => {
+const History = ({ transactions, handleDelete, handleOpen }) => {
+
   return (
     <div className="history">
       <h3>History</h3>

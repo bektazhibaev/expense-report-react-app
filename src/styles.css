@@ -29,6 +29,7 @@ header {
   text-align: center;
   justify-content: center;
   width: 100px;
+  border-radius: 10px;
 }
 
 .labels {
@@ -107,4 +108,11 @@ header {
 
 .balance-small {
   font-size: 30px;
+}
+
+.submitBtn {
+  padding: 10px;
+  font-size: large;
+  border-radius: 10px;
+  margin: 20px;
 }

@@ -3,12 +3,15 @@ import Balance from "./components/Balance";
 import IncomeExpenseCard from "./components/IncomeExpenseCard";
 import History from "./components/History";
 import Inputs from "./components/Inputs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import BasicModal from "./components/EditModal";
 
 export default function App() {
-  const [transactions, setTransactions] = useState([]);
+  const [transactions, setTransactions] = useState(() => {
+    const savedLocalData = localStorage.getItem("localCopyTransactions");
+    return JSON.parse(savedLocalData) || [];
+  });
   const [isOpen, setIsOpen] = useState(false);
   const [transactionName, setTransactionName] = useState("");
   const [transactionAmount, setTransactionAmount] = useState("");
@@ -37,8 +40,8 @@ export default function App() {
         {
           id: nanoid(),
           name: transactionName,
-          amount: transactionAmount
-        }
+          amount: transactionAmount,
+        },
       ];
 
       setTransactions(newTransactions);
@@ -76,6 +79,11 @@ export default function App() {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    localStorage.setItem("localCopyTransactions", JSON.stringify(transactions));
+    console.log("useffect-1", localStorage.getItem("localCopyTransactions"));
+  }, [transactions]);
+
   return (
     <div className="App">
       {!isOpen ? (
@@ -96,9 +104,9 @@ export default function App() {
               transactions={transactions}
               handleDelete={handleDelete}
               handleOpen={handleOpen}
-              isOpen={isOpen}
             />
           </section>
+
           <section className="input-section">
             <Inputs
               handleInputs={handleInputs}
