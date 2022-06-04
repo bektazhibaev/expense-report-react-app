@@ -61,11 +61,13 @@ header {
 .positive {
   margin: 5px 20px;
   border: 3px solid green;
+  background-color: rgb(209, 238, 236);
 }
 
 .negative {
   margin: 5px 20px;
   border: 3px red solid;
+  background-color: rgb(235, 192, 192);
 }
 
 .transaction-name {

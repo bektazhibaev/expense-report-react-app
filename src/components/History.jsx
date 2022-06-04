@@ -3,10 +3,19 @@ import "../styles.css";
 
 const History = ({ transactions, handleDelete, handleOpen }) => {
 
+  const [page, setPage] = useState(0);
+
+  const handlePrev = () => {
+    if (page > 0) setPage(page => page - 1)
+  }
+
+  const handleNext = () => {
+    if (transactions.length/2 > page + 1) setPage(page => page + 1)
+  }
   return (
     <div className="history">
       <h3>History</h3>
-      {transactions.map((transaction) => {
+      {transactions.slice(page * 4, page * 4 + 4).map((transaction) => {
         let classNameForTransaction = "transactions";
         classNameForTransaction +=
           transaction.amount > 0 ? " positive" : " negative";
@@ -24,6 +33,10 @@ const History = ({ transactions, handleDelete, handleOpen }) => {
           </div>
         );
       })}
+      <div className="prevNextBtns">
+        <button disabled={ page <= 0 } onClick={handlePrev}>Prev</button>
+        <button disabled={Math.floor(transactions.length/4) <= page} onClick={handleNext}>Next</button>
+      </div>
     </div>
   );
 };
